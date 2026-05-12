@@ -98,12 +98,12 @@
     }
 
     h1 {
-      font-size: clamp(1.6rem, 4.8vw, 2.7rem);
+      font-size: clamp(1.6rem, 4.8vw, 2rem);
       max-width: 8ch;
     }
 
     h2 {
-      font-size: clamp(2rem, 3vw, 3.15rem);
+      font-size: clamp(2rem, 3vw, 2rem);
       max-width: 15ch;
     }
 
@@ -231,28 +231,35 @@
 
     .hero-card {
       display: grid;
-      grid-template-columns: 58fr 42fr;
+      grid-template-columns: 42fr 58fr;
+      min-height: 430px;
       background: var(--surface);
       border-radius: var(--radius-xl);
       overflow: hidden;
       box-shadow: var(--shadow);
       border: 1px solid rgba(37, 37, 33, 0.05);
-      align-items: stretch;
-    }
-
-    .hero-media {
-      min-height: 395px;
-      background: url('images/kantoor-met-axoo-scantag.png') center center / cover no-repeat;
     }
 
     .hero-copy {
-      background: var(--green);
-      color: white;
-      padding: 28px 28px 24px;
+      padding: 42px 44px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      gap: 22px;
+      justify-content: center;
+      background: linear-gradient(
+        90deg,
+        rgba(112,155,104,1) 0%,
+        rgba(112,155,104,0.98) 76%,
+        rgba(112,155,104,0.92) 100%
+      );
+      position: relative;
+      z-index: 2;
+      color: white;
+    }
+
+    .hero-media {
+      position: relative;
+      min-height: 430px;
+      background: url('images/kantoor-met-axoo-scantag.png') center center / cover no-repeat;
     }
 
     .hero-copy p,
@@ -263,7 +270,8 @@
     .hero-text {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 26px;
+      max-width: 520px;
     }
 
     .hero-main {
@@ -277,7 +285,7 @@
 
     .hero-price {
       margin: 0;
-      font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+      font-size: clamp(1.65rem, 2vw, 1.7rem);
       font-weight: 900;
       line-height: 1.03;
       letter-spacing: -0.03em;
@@ -920,8 +928,6 @@
     <section class="hero">
       <div class="container">
         <div class="hero-card">
-          <div class="hero-media" aria-label="Kantoor met Axoo ScanTag voor digitale arbeidstijdregistratie"></div>
-
           <div class="hero-copy">
             <div class="hero-text">
               
@@ -939,9 +945,11 @@
             </div>
 
             <p class="hero-note">
-              Prijs zonder 21% BTW - abonnement 100% fiscaal aftrekbaar
+              <br>Prijs zonder 21% BTW - abonnement 100% fiscaal aftrekbaar
             </p>
           </div>
+
+          <div class="hero-media" aria-label="Kantoor met Axoo ScanTag voor digitale arbeidstijdregistratie"></div>
         </div>
 
         <div class="quick-links">
@@ -1262,4 +1270,3 @@
   </footer>
 </body>
 </html>
-
