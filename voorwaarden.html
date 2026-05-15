@@ -314,14 +314,27 @@
     </div>
     <script src="/js/cookie-banner.js"></script>
   </footer>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EFP44T6JQG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+ 
+ <script>
+  if (localStorage.getItem("cookie-consent") === "accepted") {
 
-  gtag('config', 'G-EFP44T6JQG');
+    const script = document.createElement("script");
+    script.async = true;
+    script.src =
+      "https://www.googletagmanager.com/gtag/js?id=G-EFP44T6JQG";
+
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+
+    gtag("config", "G-EFP44T6JQG");
+  }
 </script>
 </body>
 </html>

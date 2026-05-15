@@ -11,7 +11,7 @@
 <meta property="og:description" content="Eenvoudige arbeidstijdregistratie voor Belgische KMO’s. Voldoe aan de tijdsregistratieplicht vanaf 2027 zonder app of extra administratie.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.axoo.be/">
-<meta property="og:image" content="https://www.axoo.be/images/kantoor-met-axoo-scantag">
+<meta property="og:image" content="https://www.axoo.be/images/kantoor-met-axoo-scantag.png">
   <title>Digitale prikklok voor KMO’s | Arbeidstijdregistratie 2027 | Axoo</title>
   <link rel="canonical" href="https://www.axoo.be/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1324,14 +1324,27 @@
     </div>
   </footer>
   <script src="/js/cookie-banner.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EFP44T6JQG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+ 
+ <script>
+  if (localStorage.getItem("cookie-consent") === "accepted") {
 
-  gtag('config', 'G-EFP44T6JQG');
+    const script = document.createElement("script");
+    script.async = true;
+    script.src =
+      "https://www.googletagmanager.com/gtag/js?id=G-EFP44T6JQG";
+
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+
+    gtag("config", "G-EFP44T6JQG");
+  }
 </script>
 </body>
 </html>
