@@ -23,16 +23,16 @@
 
   <style>
     :root {
-      --bg: #f3f3f0;
+      --bg: #ffffff;
       --surface: #ffffff;
-      --surface-soft: #ecece7;
+      --surface-soft: #ffffff;
       --text: #252521;
       --muted: #66665f;
-      --green: #709b68;
-      --green-dark: #4f7f53;
+      --green: #6f816c;
+      --green-dark: #e2ddda;
       --green-soft: #d9efcb;
-      --yellow: #efbe00;
-      --yellow-dark: #d2a700;
+      --yellow: #20384f;
+      --yellow-dark: #455b6e;
       --blue: #4669b7;
       --blue-dark: #39589e;
       --shadow: 0 18px 40px rgba(0, 0, 0, 0.07);
@@ -80,8 +80,8 @@
       display: inline-block;
       margin-bottom: 18px;
       padding: 6px 10px;
-      background: var(--green-soft);
-      color: var(--green-dark);
+      background: #e2ddda;
+      color: #000000;
       font-size: 0.98rem;
       font-weight: 500;
       line-height: 1.1;
@@ -135,7 +135,7 @@
 
     .btn-primary {
       background: var(--yellow);
-      color: #231f00;
+      color: #ffffff;
       border-color: var(--yellow);
     }
 
@@ -145,8 +145,8 @@
     }
 
     .btn-secondary {
-      background: var(--green);
-      color: white;
+      background: #ffffff;
+      color: #6f816c;
       border-color: var(--green);
     }
 
@@ -169,7 +169,7 @@
       position: sticky;
       top: 0;
       z-index: 40;
-      background: rgba(243, 243, 240, 0.94);
+      background: #ffffff;
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(37, 37, 33, 0.05);
     }
@@ -247,9 +247,9 @@
       justify-content: center;
       background: linear-gradient(
         90deg,
-        rgba(112,155,104,1) 0%,
-        rgba(112,155,104,0.98) 76%,
-        rgba(112,155,104,0.92) 100%
+        #6f816c,
+        #6f816c,
+        #6f816c 
       );
       position: relative;
       z-index: 2;
@@ -303,8 +303,8 @@
 
     .hero-cta {
   display: inline-block;
-  background:#efbe00; /* basis blauw */
-  color: #000000;
+  background:#20384f; /* basis blauw */
+  color: #ffffff;
   border-radius: 20px;
   padding: 16px 18px 17px;
   font-size: clamp(0.98rem, 1.15vw, 1.28rem);
@@ -316,7 +316,7 @@
 }
 
 .hero-cta:hover {
-  background: #d2a700; /* iets donkerder voor hover */
+  background: #39589e; /* iets donkerder voor hover */
 }
 
     .hero-note {
@@ -340,7 +340,7 @@
     }
 
     .duiding-box {
-      background: rgba(164, 204, 216, 0.95);
+      background: #e2ddda;
       border-radius: 24px;
       padding: 26px 28px;
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
@@ -424,30 +424,32 @@
 
     .cta-strip { padding-top: 8px; }
 
-    .trial-highlight {
-      display: inline-block;
-      background: var(--green);
-      border-radius: 34px;
-      padding: 22px 24px 24px;
-      box-shadow: var(--shadow);
-      max-width: 740px;
-    }
+   .trial-highlight {
+  width: 100%;
+  max-width: 1180px;
+  background: #d8d2cf;
+  border-radius: 24px;
+  padding: 30px 30px 32px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(37, 37, 33, 0.04);
+}
 
-    .trial-highlight .btn {
-      margin-bottom: 18px;
-    }
+.trial-highlight .btn {
+  margin-bottom: 22px;
+}
 
-    .trial-note {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.95);
-      font-size: 1rem;
-      line-height: 1.7;
-      max-width: 60ch;
-    }
+.trial-note {
+  margin: 0;
+  color: #111111;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  max-width: none;
+}
 
-    .trial-note strong {
-      color: white;
-    }
+.trial-note strong {
+  color: #111111;
+  font-weight: 700;
+}
 
     .law-grid {
       display: grid;
@@ -463,7 +465,7 @@
     }
 
     .law-list-box {
-      background: rgba(164, 204, 216, 0.95);
+      background: #e2ddda;
       padding: 14px 18px;
       margin: 16px 0 18px 16px;
       border-radius: 20px;
@@ -824,14 +826,14 @@
       }
 
       .trial-highlight {
-        padding: 18px 18px 20px;
-        border-radius: 26px;
-      }
+  padding: 22px;
+  border-radius: 20px;
+}
 
-      .trial-note {
-        font-size: 0.95rem;
-        line-height: 1.65;
-      }
+.trial-note {
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
 
       .duiding-section {
         padding-top: 8px;
@@ -1096,7 +1098,7 @@ We bezorgen jou extra ScanTags, elke werknemer krijgt in zijn profiel een vaste 
           </div>
         </div>
         <div class="visual-card visual-card--plain">
-          <img src="images/scannen-axoo.png" loading="lazy" alt="Werknemer scant Axoo ScanTag zonder app te installeren" class="visual-img visual-img--monitor">
+          <img src="images/scan-aan-muur.png" loading="lazy" alt="Werknemer scant Axoo ScanTag zonder app te installeren" class="visual-img visual-img--monitor">
         </div>
       </div>
     </section>
